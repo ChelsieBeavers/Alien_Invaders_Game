@@ -105,7 +105,7 @@ class Invaders(GameApp):
     # return the number of keys in the list of keys currently held down, from GInput
     def lastkeys(self):
         """
-        Returns the lenth of the list of keys currently pressed down. 
+        Returns the lenth of the list of keys currently pressed down.
         """
         return len(self.keys)
 
@@ -191,16 +191,9 @@ class Invaders(GameApp):
 
         #
         self._determineState()
-        # self._stateInactive()
-        # self._stateNewWave()
-        # self._stateActive(dt)
-        # self._statePaused()
-        # self._stateContinue()
-
         if self._state == STATE_INACTIVE:
             self._stateInactive()
         if self._state == STATE_NEWWAVE:
-            #self._state_newwave()
             self._stateNewWave()
         if self._state == STATE_ACTIVE:
             self._stateActive(dt)
@@ -227,7 +220,6 @@ class Invaders(GameApp):
         class Wave.  We suggest the latter.  See the example subcontroller.py
         from class.
         """
-        # IMPLEMENT ME
 
         if self._text != None:
             self._text.draw(self.view)
@@ -256,13 +248,6 @@ class Invaders(GameApp):
                 self._state = STATE_COMPLETE
         if self._state == STATE_COMPLETE and transition:
             self._state = STATE_NEWWAVE
-
-
-
-        # if self._state == STATE_ACTIVE and transition:
-        #     self._state = STATE_PAUSED
-
-
 
 
     def _stateInactive(self):

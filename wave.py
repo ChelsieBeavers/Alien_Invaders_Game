@@ -287,7 +287,7 @@ class Wave(object):
         chosen_alien = self._aliens[self.botRow(colnum)][colnum]
 
         self._time += dt
-        if self._time > ALIEN_SPEED: #and self._bolts == []:
+        if self._time > ALIEN_SPEED:
             if self._steps>self._fire:
                 for row in range(len(self._aliens)):
                     for col in range(len(self._aliens[row])):
@@ -450,10 +450,6 @@ class Wave(object):
 
 
     # HELPER METHODS FOR COLLISION DETECTION
-
-
-
-        #pass
 
 
     def _invadedLine(self):

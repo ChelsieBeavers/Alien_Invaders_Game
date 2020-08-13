@@ -86,21 +86,12 @@ class Ship(GImage):
         bottom= bolt.y - BOLT_HEIGHT
         top= bolt.y + BOLT_HEIGHT
 
-        # for row in range(len(self._aliens)):
-        #     for col in range(len(self._aliens[row])):
-        #         each_alien = self._aliens[row][col]
-
         if bolt.isPlayerBolt() == False:# positive bool
             if (self.contains((left,bottom)) or self.contains((left,top)) or self.contains((right,bottom)) or self.contains((right,top))):
                 return True
             else:
                 return False
 
-        # if bolt.isPlayerBolt() == False:
-        #     if self.contains((bolt.x, bolt.y)):
-        #         return True
-        # else:
-        #     False
 
 
     # METHODS TO MOVE THE SHIP AND CHECK FOR COLLISIONS
@@ -128,9 +119,6 @@ class Alien(GImage):
     """
 
 
-
-    #  IF YOU ADD ATTRIBUTES, LIST THEM BELOW
-    #pass
 
     # GETTERS AND SETTERS (ONLY ADD IF YOU NEED THEM)
     def getBolts(self):
